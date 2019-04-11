@@ -1,9 +1,23 @@
 <ion-header>
   <ion-toolbar>
     <ion-title>
-      Tab Two
+      Pokémon
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content></ion-content>
+<ion-content>
+  <ion-row>
+    <ion-col size="6" size-lg offset="2">
+        <ion-button size="small" (click) = "getPrevious()"><<</ion-button>
+    </ion-col>
+    <ion-col size="3" size-lg>
+        <ion-button size="small" (click) = "getNext()">>></ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-list>
+    <ion-item *ngFor="let pokemon of pokes">
+      <ion-label>{{pokemon.name}}</ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
